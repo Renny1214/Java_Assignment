@@ -28,7 +28,7 @@ public class EmployeeController {
     public static Principal principal;
 
     @PostMapping( consumes="application/json")
-    public boolean signUp(@RequestBody Employee employee)
+    public boolean addEmployee(@RequestBody Employee employee)
     {
         employee.setCreate_date(new Date());
         employee.setUpdate_date(new Date());
@@ -86,7 +86,7 @@ public class EmployeeController {
     }
 
     @PutMapping("/{id}")
-     public Employee replaceEmployee(@RequestBody Employee newEmployee, @PathVariable Long id) {
+     public Employee updateEmployee(@RequestBody Employee newEmployee, @PathVariable Long id) {
         logger.info("Put Api called to update information about a particular id employee");
         try{
             return employeeService.updateEmployee(newEmployee,id);
