@@ -1,0 +1,11 @@
+Requirements -
+This application performs the CRUD operations for the Employee Table.
+
+Technology Used -
+1. DataBase - MySQL
+2. SpringBoot
+3. Hibernate
+4. Swagger
+
+
+
